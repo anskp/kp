@@ -3,7 +3,7 @@
 A modern, responsive portfolio website built with React.js showcasing my skills in Full-Stack Development, Cybersecurity, Blockchain Development, and AI & Machine Learning.
 
 ## 🚀 Live Demo
-[Portfolio Link - Coming Soon]
+[(https://kp-flame-omega.vercel.app/)]
 
 ## 🛠️ Tech Stack
 
