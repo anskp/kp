@@ -7,6 +7,7 @@ import { Design, Develope} from './AllSvgs';
 import LogoComponent from '../subComponents/LogoComponent';
 import SocialIcons from '../subComponents/SocialIcons';
 import PowerButton from '../subComponents/PowerButton';
+import BackButton from '../subComponents/BackButton';
 import ParticleComponent from '../subComponents/ParticleComponent';
 import BigTitle from '../subComponents/BigTitlte'
 
@@ -91,6 +92,7 @@ const MySkillsPage = () => {
         <Box>
 
 <LogoComponent />
+<BackButton />
 <SocialIcons />
 <PowerButton />
 <ParticleComponent theme='light' />

@@ -1,6 +1,5 @@
 import { motion } from 'framer-motion';
 import React from 'react'
-import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 import { Github } from '../components/AllSvgs';
 
@@ -8,11 +7,11 @@ import { Github } from '../components/AllSvgs';
 
 const Box = styled(motion.li)`
 width: 16rem;
-height: 40vh;
+min-height: 18rem;
 background-color: ${props => props.theme.body};
 color:${props => props.theme.text};
 padding: 1.5rem 2rem;
-margin-right: 8rem;
+margin-right: 2rem;
 border-radius: 0 50px 0 50px;
 display: flex;
 flex-direction: column;
@@ -35,6 +34,7 @@ const Description = styled.h2`
 font-size: calc(0.8em + 0.3vw);
 font-family: 'Karla',sans-serif;
 font-weight: 500;
+line-height: 1.4;
 `
 const Tags = styled.div`
 border-top: 2px solid ${props =>props.theme.text};
@@ -52,7 +52,9 @@ font-size:calc(0.8em + 0.3vw);
 
 const Footer = styled.footer`
 display: flex;
-justify-content: space-between;
+justify-content: flex-end;
+align-items: center;
+gap: 0.75rem;
 `
 
 const Link = styled.a`
@@ -113,10 +115,12 @@ const Card = (props) => {
                 }
             </Tags>
             <Footer>
-                <Link href={demo} target="_blank">
+                {demo ? (
+                <Link href={demo} target="_blank" rel="noreferrer">
                     Visit
                 </Link>
-                <Git  href={github}  target="_blank">
+                ) : null}
+                <Git  href={github}  target="_blank" rel="noreferrer">
                     <Github width={30} height={30} />
                 </Git>
             </Footer>

@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion'
 import React, { useState } from 'react'
-import { NavLink } from 'react-router-dom'
+import { NavLink, useLocation } from 'react-router-dom'
 import styled, { keyframes } from 'styled-components'
 import LogoComponent from '../subComponents/LogoComponent'
 import PowerButton from '../subComponents/PowerButton'
@@ -28,7 +28,7 @@ const Container = styled.div`
 padding: 2rem;
 `
 
-const Contact = styled.div`
+const Contact = styled(NavLink)`
 color: ${props => props.theme.text};
 position: absolute;
 top: 2rem;
@@ -112,6 +112,7 @@ transition: all 1s ease;
     display: ${props => props.click ? 'none' :'inline-block'  };
     padding-top: 1rem;
 }
+
 `
 
 const DarkDiv = styled.div`
@@ -128,8 +129,9 @@ transition: height 0.5s ease, width 1s ease 0.5s;
 
 
 const Main = () => {
+    const location = useLocation();
 
-    const [click, setClick] = useState(false);
+    const [click, setClick] = useState(Boolean(location.state?.showIntro));
 
     const handleClick = () => setClick(!click);
 
@@ -146,7 +148,7 @@ const Main = () => {
                 <span>click here</span>
             </Center>
 
-            <Contact>
+            <Contact to="/cv">
                 <motion.h2
                 initial={{
                     y:-200,
@@ -160,7 +162,7 @@ const Main = () => {
                 whileTap={{scale: 0.9}}
                 
                 >
-                    Say hi..
+                    cv
                 </motion.h2>
             </Contact>
             <BLOG to="/blog">
@@ -230,7 +232,6 @@ const Main = () => {
             </SKILLS>
 
             </BottomBar>
-
             </Container>
             {click ? <Intro click={click} /> : null }
         </MainContainer>

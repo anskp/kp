@@ -6,6 +6,7 @@ import {lightTheme} from './Themes';
 import LogoComponent from '../subComponents/LogoComponent';
 import SocialIcons from '../subComponents/SocialIcons';
 import PowerButton from '../subComponents/PowerButton';
+import BackButton from '../subComponents/BackButton';
 import ParticleComponent from '../subComponents/ParticleComponent';
 import BigTitle from '../subComponents/BigTitlte'
 import astronaut from '../assets/Images/spaceman.png'
@@ -63,6 +64,7 @@ const AboutPage = () => {
         <Box>
 
 <LogoComponent />
+<BackButton />
 <SocialIcons />
 <PowerButton />
 <ParticleComponent theme='light' />

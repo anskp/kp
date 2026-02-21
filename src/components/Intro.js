@@ -47,6 +47,15 @@ display: flex;
     width: 80%;
     height: auto;
 }
+
+@media (max-width: 900px){
+    .pic{
+        top: 50%;
+        bottom: auto;
+        transform: translate(-50%,-50%);
+        width: min(75%, 12rem);
+    }
+}
 `
 
 const Text = styled.div`
@@ -65,16 +74,13 @@ justify-content: space-evenly;
     font-weight:300;
 
 }
-
-
-
 `
 
 const Intro = () => {
     return (
         <Box
-        initial={{height:0}}
-        animate={{height: '55vh'}}
+        initial={{opacity:0}}
+        animate={{opacity:1}}
         transition={{ type: 'spring', duration:2, delay:1 }}
         >
             <SubBox>
