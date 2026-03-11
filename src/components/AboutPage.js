@@ -1,7 +1,5 @@
 import React from 'react'
 import styled, { keyframes } from 'styled-components'
-import {lightTheme} from './Themes';
-
 
 import LogoComponent from '../subComponents/LogoComponent';
 import SocialIcons from '../subComponents/SocialIcons';

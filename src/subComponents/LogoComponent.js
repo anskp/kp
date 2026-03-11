@@ -1,9 +1,5 @@
 import React from 'react'
 import styled from 'styled-components'
-import { lightTheme } from '../components/Themes'
-
-
-
 
 const Logo = styled.h1`
 display: inline-block;
